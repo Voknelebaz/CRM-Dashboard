@@ -1,0 +1,51 @@
+extends base
+
+block vars
+block content
+    section.main
+        .sidebar
+            .logo
+                img.logo__img(src='assets/images/icons/Logo.svg')
+                .logo__text
+                    p.logo__title Dashboard
+                    p.logo__ver v.01
+            include components/menu
+            .avatar
+                .avatar__image
+                    img.avatar__img(src='assets/images/Avatar.png')
+                .credentials
+                    p.avatar__name Evano
+                    p.avatar__pos Project Manager
+        .dashboard
+            .hello
+                h1.hello__text Hello Evano 👋🏼,
+            .dashboard__table.table
+                .table__top
+                    .table__title
+                        h2.table__title-main All Customers
+                        h3.table__title-sec Active Members
+                    .table__search
+                        span.table__icon
+                            img(src='assets/images/icons/Search.svg')
+                        input.table__input(
+                            type='text'
+                            name='search'
+                            placeholder='Search'
+                        )
+                .table__body
+                    include components/table
+                .table__bottom
+                    p.table__bottom-text Showing data 1 to 8 of  256K entries
+                    .table__bottom-pag
+                        a.table__pag-link(href="#") <
+                        a.table__pag-link(href="#") 1
+                        a.table__pag-link(href="#") 2
+                        a.table__pag-link(href="#") 3
+                        a.table__pag-link(href="#") 4
+                        a.table__pag-dot(href="#") ...
+                        a.table__pag-link(href="#") 40
+                        a.table__pag-link(href="#") >
+
+
+
+

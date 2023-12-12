@@ -1,0 +1,19 @@
+include data
+
+table(style='width:100%; height:100%')
+    tr
+        th.table__header-text Customer Name
+        th.table__header-text Company
+        th.table__header-text Phone Number
+        th.table__header-text Email
+        th.table__header-text Country
+        th.table__header-text Status
+    each person in people
+        tr
+            td.table__body-text= person.name
+            td.table__body-text= person.company
+            td.table__body-text= person.phone
+            td.table__body-text= person.email
+            td.table__body-text= person.country
+            td.table__body-status
+                p.status=person.status
