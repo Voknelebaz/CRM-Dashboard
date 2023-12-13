@@ -179,8 +179,6 @@
 .table .status {
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: rgba(22, 192, 152, 0.38);
-  color: #008767;
   font-family: "Poppins", "sans-serif";
   font-size: 0.875rem;
   font-weight: 500;
@@ -250,6 +248,35 @@ table td {
   padding: 0.8rem 0.5rem;
 }
 
+.active {
+  border-radius: 0.25rem;
+  border: 0.1rem solid #008767;
+  background: rgba(22, 192, 152, 0.38);
+  color: #008767;
+}
+
+.inactive {
+  color: #DF0404;
+  border-radius: 0.25rem;
+  border: 0.1rem solid #DF0404;
+  background: #FFC5C5;
+}
+
+.person__card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 8rem;
+}
+
+.person__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 @media (max-width: 1110px) {
   .dashboard {
     padding: 2.56rem 2rem 5rem;
@@ -269,7 +296,46 @@ table td {
     margin-bottom: 1rem;
   }
   .menu .icon {
-    margin-right: 0rem;
+    margin-right: 0;
+  }
+}
+@media (max-width: 875px) {
+  table {
+    display: none;
+  }
+  .table__title {
+    display: none;
+  }
+  .table__bottom-text {
+    display: none;
+  }
+  .sidebar {
+    max-width: 7rem;
+  }
+}
+@media (min-width: 875px) {
+  .table__flex {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .dashboard__table {
+    padding: 1.88rem 1rem 1.56rem 1rem;
+  }
+  .table__input {
+    max-width: 5rem;
+  }
+  .sidebar {
+    max-width: 3rem;
+  }
+  .table__bottom-pag {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .avatar {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }
 

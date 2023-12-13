@@ -1,0 +1,9 @@
+.person__cards
+    each person in people
+        .person__card
+            p.person__name.table__body-text= person.name
+            p.person__company.table__body-text= person.company
+            p.person__phone.table__body-text= person.phone
+            p.person__email.table__body-text= person.email
+            p.person__country.table__body-text= person.country
+            p(class=(person.status === 'Active') ? 'active' : 'inactive').status=person.status

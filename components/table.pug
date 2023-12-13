@@ -16,4 +16,4 @@ table(style='width:100%; height:100%')
             td.table__body-text= person.email
             td.table__body-text= person.country
             td.table__body-status
-                p.status=person.status
+                p(class=(person.status === 'Active') ? 'active' : 'inactive').status=person.status
